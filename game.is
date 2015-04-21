@@ -1,0 +1,37 @@
+Description::
+    Welcome to Terra Strategicon! 
+    A turn based Exploration, Conquest, Trade, and Adventure game, where you 
+    can control tribes, your own individual hero, or even abstract concepts!
+    
+    Explore the Directory, where everything has a naming bureaucracy to guide your 
+    understanding and interaction. Expect each file to have it's _own_ language
+    suited to a description that fits only it's purpose. Of course, languages
+    are used together and influence eachother
+    
+    There are the following types of files:
+        1) *.is file:
+            Definition file. The language here should be like XML for example.
+            
+        2) *.has file:
+            Inner structure definition file. The language here should be like 
+            XML at-least and to support Turing completeness
+        3) *.can file:
+            This is neither *.is or *.has file! It defines _behavior_ and _may_
+            result in many *.is and/or *.has files as "execution/expansion results"!
+            Documentation fits into this category, please don't polute *.has 
+            and *.is!
+            
+        4) *.res[ource] file: it's a *.is and/or base file which associates 
+            bitblobs (sounds, images, 3d models, bitarrays, ...) with 
+            a set of "dimension bindage" files (those bind the bitblobs to 
+            gameplay world files like *.has and *.is)
+    
+    Everything is a text based resource or some bitblob associated with the 
+    texts.
+    
+    Every aspect of the world contains it's definition/language, it's bitblobs, 
+    and some renderer/script engines. Everything in the world is expressed 
+    through language and the language scripts define "molds" from which gameplay 
+    "objects" are "casted". Those casts (casted objects) are solidified into 
+    Characters (interactive "live" objects) which inter-act with each other.
+    
