@@ -1,0 +1,25 @@
+Change::
+    5 Symbols, 5 cards, 3 change basic actions:
+        Sickle      Support     (Food, Support-Food, Food-trading)
+        Hammer      Build       (Infrastructure, Fixing, Wage-working)
+        Torch       Influence   (Synergy, Strife, Opposing)
+        Gear        Create      (Invent, Control, Trade)
+        Book        Knowledge   (Explore, Test, Teach)
+
+Interact::
+    5 Symbols, 5 cards, 3 subdue actions:
+        Observe     (Watch, Record, Explore)
+        Communicate (Speak, Read, Write)
+        Learn       (Trial, Reproduce, Experiment)
+        Improve     (Play,  Repeating, Introduce)
+        Counter     (Ignore, Reject, Interject)
+
+Subdue::
+    5 Symbols, 5 cards, 3 subdue actions:
+        Spear       Offence                     (?, ?, ?)
+        Sword       Offence, Defense            (?, ?, ?)
+        Shield      Defence                     (?, ?, ?)
+        Bow         Damage                      (?, ?, ?)
+        Gun         Damage, Offence, Defence    (?, ?, ?)
+
+

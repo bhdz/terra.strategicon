@@ -1,0 +1,24 @@
+Change::
+    5 Symbols, 5 cards, 3 change unlockable actions per card:
+        Sickle      Support     (Food, Support-Food, Food-trading)
+        Hammer      Build       (Infrastructure, Fixing, Wage-working)
+        Torch       Influence   (Synergy, Strife, Opposing)
+        Gear        Create      (Invent, Control, Trade)
+        Book        Knowledge   (Explore, Test, Teach)
+
+Interact::
+    5 Symbols, 5 cards, 3 interact unlockable actions per card:
+        Observe     (Watch, Record, Explore)
+        Communicate (Speak, Read, Write)
+        Learn       (Trial, Reproduce, Experiment)
+        Improve     (Play,  Repeating, Introduce)
+        Counter     (Ignore, Reject, Interject)
+
+Subdue::
+    5 Symbols, 5 cards, 3 subdue unlockable actions per card:
+        Spear       Offence                     ("Stand your ground!", "Invade!", "Evacuate/Flee!")
+        Sword       Offence, Defense            ("Counter/En-garde!", "Parry!", "Cut!")
+        Shield      Defence                     ("Cover!", "Block!", "Bash!")
+        Bow         Damage                      ("Reach!", "Loose!", "Range!")
+        Gun         Damage, Offence, Defence    ("Push!", "Focus!", "Rate!")
+

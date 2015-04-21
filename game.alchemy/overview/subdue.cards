@@ -1,0 +1,9 @@
+Subdue::
+    5 Symbols, 5 cards, 3 subdue actions:
+        Spear       Offence                     (?, ?, ?)
+        Sword       Offence, Defense            (?, ?, ?)
+        Shield      Defence                     (?, ?, ?)
+        Bow         Damage                      (?, ?, ?)
+        Gun         Damage, Offence, Defence    (?, ?, ?)
+
+
