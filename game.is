@@ -14,7 +14,7 @@ Description::
             
         2) *.has file:
             Inner structure definition file. The language here should be like 
-            XML at-least and to support Turing completeness
+            XML at-least **snip!delete** and to support Turing completeness **snip!delete~**
         3) *.can file:
             This is neither *.is or *.has file! It defines _behavior_ and _may_
             result in many *.is and/or *.has files as "execution/expansion results"!
