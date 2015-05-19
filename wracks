@@ -1,0 +1,19 @@
+W[racking completed]
+
+W[rack] WRACK WRACKKING
+
+W[ord] h[ack]ing
+W{ord} h{ack}ing
+W\{ord\} h\{[ack\{]\}ing
+
+W{ord} h{ack}ing
+
+W[ord] h[ack]ing
+
+W\{[ord\{] h\{[ack\{]ing
+W\{[\}ord\{]\} h\{[ack\{]ing
+
+W\\{{[\}ord\{]\} h\{[ack\{]ing...
+
+W[ord] H[ack]ing -> Dictionary ~ new: "Term"                                @Glas.Gowor.LocalSys
+"?"
