@@ -1,0 +1,30 @@
+#!/bin/cat
+
+Hi. 
+
+This file describes::
+    *) The alchemy of a turnbased, space game in 3d!
+    *) The Scenario files
+
+
+{! glas -> ver2.:Glas.System !}
+
+Deus ex machina ->> Dictionary ~ Meta(s) ~ Elaboration(s) ::
+    Listage::
+        *) ION `accelerator Cannon;
+        *) Photonic `Sails;
+        *) `Virii; !and `Bacteriae;
+        **) Stay tuned.. moar to come
+        *Ships))
+            `Prowlers;Space Destroyers; !!and/or!
+            `Motherloads;Space Shipping; !!and/or!
+            `Sharks;Space Carriers;
+                --> {> Choose your ship %s, mate! >> Ship ~ Space: * <}
+
+{! glas: `stop;stop'page; ->> ver2.:Glas.System !}
+
+These were the Machina-ex-Deus device plotting. Stay tuned. This glas wave is ~/waves/.over
+
+~/do/doing/glas/.for-gaming::
+    !!Note: This is _fictious_ language; Fit only for this file\n
+
