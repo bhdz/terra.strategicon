@@ -1,0 +1,9 @@
+This file is for you rm-rfd monkey... REmember && SPread rather than EmploY & DEstroy 
+
+Storage::back-up --Procedure=Truth-full -line
+{{ mv *.* && n; cp -al ~/Desktop/* /srv/store/pub/back-ups/{@ current -> User @}/Desktop/ }}
+
+{{ cp -al ~/home/{@ current -> User @}/* /srv/store/pub/back-ups/{@ current -> User @}/Desktop/ && /srv/store/pub/back-ups/homes/{@ **same!?last** @} }}
+
+{! mv reciept /home/.all/reciepts.d /home{s}/default !}
+Storage::
