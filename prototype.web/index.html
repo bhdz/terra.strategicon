@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terra! Strategicon</title>
+    <link rel="stylesheet" href="./main.css">
+
+    <script data-main="scripts/main" src="scripts/require.js"></script>
+    
+    <script type="text/javascript">
+        function createMyCanvas(frameId, canvasId, canvasWidth, canvasHeight) {
+            var canvasFrame = document.getElementById(frameId);
+            console.log("canvasFrame = "+canvasFrame)
+            
+            canvas = document.createElement('canvas');
+            canvas.setAttribute('width', canvasWidth);
+            canvas.setAttribute('height', canvasHeight);
+            canvas.setAttribute('id', canvasId);
+            canvas.setAttribute('style', 'border:1px solid #000000;');
+            canvasFrame.appendChild(canvas);
+        }
+        
+        function initMyScreen() {
+            //context = document.getElementById('myscreen').getContext("2d");
+            createMyCanvas("myscreen", "myscreen_canvas", 1024, 800);
+        }
+    </script>
+</head>
+<body onload="initMyScreen()">
+    <p> This is the game screen:</p>
+    <div id="myscreen">
+    </div>
+</body>
+</html>
