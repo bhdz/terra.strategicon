@@ -2,32 +2,35 @@
 <html>
 <head>
     <title>Terra! Strategicon</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./resources/styles/main.css">
 
     <script data-main="scripts/main" src="scripts/require.js"></script>
     
     <script type="text/javascript">
-        function createMyCanvas(frameId, canvasId, canvasWidth, canvasHeight) {
-            var canvasFrame = document.getElementById(frameId);
+        function createMyCanvas(gamescreenId, canvasId, canvasWidth, canvasHeight) {
+            var canvasFrame = document.getElementById(gamescreenId);
             console.log("canvasFrame = "+canvasFrame)
             
             canvas = document.createElement('canvas');
             canvas.setAttribute('width', canvasWidth);
             canvas.setAttribute('height', canvasHeight);
             canvas.setAttribute('id', canvasId);
-            canvas.setAttribute('style', 'border:1px solid #000000;');
+            canvas.setAttribute('style', 'border:2px solid #000000;');
             canvasFrame.appendChild(canvas);
         }
         
         function initMyScreen() {
             //context = document.getElementById('myscreen').getContext("2d");
-            createMyCanvas("myscreen", "myscreen_canvas", 1024, 800);
+            createMyCanvas("gamescreen", "canvasid", 700, 480);
         }
     </script>
 </head>
 <body onload="initMyScreen()">
-    <p> This is the game screen:</p>
-    <div id="myscreen">
+
+    <div class="myscreen">
+        <div id="screentitle">Terra! Strategicon!</div>
+        <div id="gamescreen"> </div>
     </div>
 </body>
 </html>
+

@@ -1,4 +1,10 @@
-
+//
+// Todo::
+//  _I_ .must: Think over whether this whole directory needsz packaging .into:
+//   another folder/directory.
+//
+//&3: 'cus I don't know how require.js will _balk_ .at: me in the phuture{+s?}
+//
 define(["utils"], function(utils) {
 
     //
@@ -11,7 +17,13 @@ define(["utils"], function(utils) {
         this.axisZ = axisZ;
         this.basis = new Vector(axisX, axisY, axisZ);
     }
-    
+
+    Coords.prototype.translate = function(obj, chosenAxis) {
+        // .. this returns the translated mapobj such that it's 
+        // .. Coordinate properties are fixed onto The Cubic HexCoordinated Map
+        // .. or something like it.
+        // .. Each. _obj_ -has ((posX, posY, posZ))
+    }    
 
     //
     // Normalized X,Y,Z coordinates, Cubic coordinate system
@@ -35,6 +47,8 @@ define(["utils"], function(utils) {
     
     //
     // returns? a path ** of Points to <pt2>
+    //&3:
+    //  Move me to _Coords_ class cas
     //
     Point.prototype.pathTo = function (pt2) {
         var path = { 
@@ -48,6 +62,11 @@ define(["utils"], function(utils) {
     //
     // normalization functions. Fix a coordinate axis and follow the rule of
     // x+y+z "always" == 0
+    //
+    // TEMPORARY HACK... Reader() .move: -Me into {{
+    //    "the Coords class" $ / translate
+    //      ... Please...
+    // }}
     //
     Point.prototype.normalizeZ = function (x, y) {
         this.posX = x;
@@ -69,6 +88,8 @@ define(["utils"], function(utils) {
     
     //
     // Vector in a Flat Cubic coordinate system
+    //  FutureReader():: 
+    //      Please -use Coords. class to -change this.x, this.y, this.z
     //
     function Vector (x, y, z) {
         this.x = x;
@@ -94,8 +115,12 @@ define(["utils"], function(utils) {
     
     //
     // This represents an edge between two Hexes. 
-    // It has an orientation and each Hex can have up to 6 edges.
-    // Two common edges comprise the borders between two Hexes.
+    // It -has .an orientation. and -each .Hex. can have up to -6 edges.
+    // Two _common_ edges .comprise: the borders between two Hexes.
+    //
+    //&3:
+    //  Borders are important ASSET of this GAME PROTOTYPE as you cannot
+    //   force units to do interesting things without this CLASS
     //
     function Edge (orient) {
         this.orientation = orient % 6;
@@ -106,7 +131,7 @@ define(["utils"], function(utils) {
     
     //
     // This represents a path extension from the center till the edges of a Hex
-    //  Hexes have 
+    //  Hexes -have Centers .and. Paths .and. Borders ..
     //
     function Path (orient) {
         this.orientation = orient % 6;
@@ -163,20 +188,25 @@ define(["utils"], function(utils) {
         }
         this.hexes = [];    // all hexes are heaped here. Use hexSearchIndices
         this.hexSearchIndices = {
-                Xaxis:  null, 
-                Yaxis:  null, 
-                Zaxis:  null 
-            ];
+
+            };
         this.assets = {};
     }
     
     //
-    // This sets the map at a given position. Duh!
+    // This .inserts: _a hex_ .in: the map at a given position. Duh!
+    //
+    //  &3: This means that ALL ADJANCED hexes must be UPDATED as NECESSARY
+    //      given a _S??((distribution==function))::arg
+    //
     //  atPosition  ** Point
     //  hex         ** hex
     //  edges       ** to update with the neighbors
     //  paths       ** to update with the neighbors
-    Map.prototype.stampOutHex = function (position, hex, edges, paths) {
+    //  hexUpdater  ** function object? to .help: Updating _the_ neighbors
+    //
+    Map.prototype.insertHex = function (position, hex, edges, paths,
+        hexUpdater) {
         return false;
     }
     
@@ -186,6 +216,7 @@ define(["utils"], function(utils) {
     //  hex         ** hex
     //  edges       ** to update with the neighbors
     //  paths       ** to update with the neighbors
+    //
     Map.prototype.set = function (position, hex, edges, paths) {
         return false;
     }
@@ -202,22 +233,59 @@ define(["utils"], function(utils) {
         return hex;
     }
     
-    Map.prototype.findHex = function (position) {
+    //
+    // This .searches. The Map for a given Hex
+    //  hexDeterminator ** Is? This the Hex _that_ you're searching Of?
+    //
+    Map.prototype.findHex = function (position, hexDeterminator) {
         return false;
     }
     
+    //
+    //  This .finds: Objects on the map
+    //
     Map.prototype.find = function (what, position) {
         return false;
     }
     
+    //
+    // Blende... This .is. a Blende .over. Maps
+    //  In other words One can combine Maps into Blendages
+    //
+    // What is a "Blende .over. Maps"?? ANOTHER MAP::
+    //   with different features and whatnot of it's HEXes
+    //
+    // Blende .is. _a Map_
+    //
+    function MapBlende(maps) {
+        this.maps = maps;
+        //this is WRONG on purpose. Game features are stored in the MAP
+        // class. Users of this class will be confused as hell if I releas
+        // -e it as such.
+        // phuture USERS! Use _Blende_ .class. not _Map_\!!
+    }
+    
+    //
+    //This I need for the Single inheritance. in Javascript
+    // Blende .inherits. Map
+    // Everything else, .inhertis: MapObj... Maotaodao -< MeeowTaoDao
+    //   No.. Everything else inherits from something else... Gotta rethink 
+    //   this whole module.
+    //
+    function MapObject() {
+        this.some_thing = null;
+    }
+    
     return {
+        MapObject: MapObject,
         Coords: Coords,
         Point:  Point,
         Vector: Vector,
         Edge:   Edge,
         Path:   Path,
         Hex:    Hex,
-        Map:    Map
+        Map:    Map,
+        Blende: MapBlende
     }
 });
 
